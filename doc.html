@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script buttons</title>
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        button{
+            padding: 8px;
+            margin: 5px;
+        }
+        /* .box{
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+            justify-content: center;
+            margin-top: 50px;
+            margin-left: 50px;
+        } */
+    </style>
+</head>
+<body id="bo">
+    
+       <p id="par"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, quaerat! Ipsam necessitatibus minima, repellat at quibusdam ad excepturi, reiciendis laudantium delectus deserunt, saepe ut modi rerum perferendis unde. Saepe pariatur porro id consequuntur voluptatem quia ad eum aspernatur non natus nisi animi debitis nostrum ipsa, reprehenderit ducimus, delectus sunt corporis!</p>
+       <br>
+
+       <button id="uppercase">Uppercase</button>
+       <button id="lowercase">lowercase</button>
+       <button id="inc">+</button>
+       <button id="dec">-</button>
+       <input type="color" id="color">
+       <input type="range" id="range">
+    
+
+    <script>
+        document.getElementById("uppercase").onclick=function()
+        {
+            document.getElementById("par").style.textTransform="uppercase";
+        }
+
+        document.getElementById("lowercase").onclick=function()
+        {
+            document.getElementById("par").style.textTransform="lowercase";
+        }
+
+        let counter=16
+        let range=16
+        document.getElementById("inc").onclick=function()
+        {
+            counter++;
+            console.log(counter+"px")
+            document.getElementById("par").style.fontSize=counter+"px";
+        }
+
+
+        document.getElementById("dec").onclick=function()
+        {
+            counter--;
+            console.log(counter+"px")
+            document.getElementById("par").style.fontSize=counter+"px";
+        }
+
+
+        document.getElementById("color").oninput=function()
+        {
+            document.getElementById("bo").style.color=document.getElementById("color").value
+        }
+
+        document.getElementById("range").oninput=function()
+        {
+            range++
+            document.getElementById("bo").style.fontSize=document.getElementById("range").value
+        }
+    </script>
+</body>
+</html>

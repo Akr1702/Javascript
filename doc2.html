@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> example</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        #text
+        {
+            height: 200px;
+            width: 300px;
+            border: 2px solid black;
+        }
+        
+        .box{
+            height: 200px;
+            width : 600px;
+            border: 2px solid black;
+        }
+        
+        </style>
+</head>
+<body>
+        <textarea name="" id="text"  rows="10" cols="30"></textarea>
+        <div class="box" id="text1"></div>
+
+     <script>
+
+        document.getElementById("text").oninput=function()
+        {
+            let text=document.getElementById("text").value;
+            console.log(text)
+            document.getElementById("text1").innerHTML= `<h1>${text}</h1>`
+        }
+     </script>
+</body>
+</html>

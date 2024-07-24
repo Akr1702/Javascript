@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color</title>
+</head>
+<body>
+
+    <input type="hidden"  disabled>
+    <!-- <button>Generate</button> -->
+    
+
+    <script>
+        // document.querySelector("button").onclick=function()
+        // {
+           
+        // }
+
+
+        setInterval(()=>{
+            let color= `${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)}`
+
+            document.querySelector("input").value=color
+            document.body.style.backgroundColor=`rgb(${color})`
+        },1000)
+    </script>
+</body>
+</html>

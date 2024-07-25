@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element Function</title>
+
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        margin-left: 10px;
+    }
+
+    body{
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVDDynFAhAhyacqMo2S198zsH988BByysfbBRGEajWwrHkNXjm7efuKGQd0g&s");
+    }
+
+    .container
+    {
+        width: 1250px;
+        height: 690px;
+        background-color: wheat;
+    }
+
+   button{
+    margin: 5px;
+   }
+
+
+</style>
+</head>
+<body>
+
+    <h1>Todo List</h1>
+    <div class="container">
+        <input type="text" >
+        <button>Submit</button>
+
+    </div>
+    
+    <script>
+        document.querySelector("button").onclick=function()
+        {
+            let val = document.querySelector("input").value;
+            document.querySelector("input").value='';
+            document.querySelector("input").focus();
+
+            let h = document.createElement("li")
+            let b = document.createElement("button")
+            let c = document.createElement("button")
+            h.innerHTML=val
+            b.innerHTML="Delete"
+            c.innerHTML="Complete"
+            document.querySelector(".container").append(h);
+            document.querySelector(".container").append(b);
+            document.querySelector(".container").append(c);
+
+            c.onclick=function()
+            {
+                h.style.textDecoration="line-through";
+            }
+
+            b.onclick=function()
+            {
+                h.remove();
+                c.remove();
+                b.remove();
+            }
+        }
+    </script>
+</body>
+</html>

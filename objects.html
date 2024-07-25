@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in JS</title>
+</head>
+<body>
+    
+    <script>
+        
+        let obj = [ {
+            rollno:101,
+            name:"Akr",
+            email:"akr@gmail.com",
+            age:21,
+            city:"Jaipur"
+        },
+
+        {
+            rollno:102,
+            name:"Advi",
+            email:"advi@gmail.com",
+            age:20,
+            city:"Gujarat"
+        },
+
+        {
+            rollno:101,
+            name:"KS",
+            email:"ks@gmail.com",
+            age:16,
+            city:"Sodala"
+        },
+
+        {
+            rollno:101,
+            name:"Bp",
+            email:"bp@gmail.com",
+            age:19,
+            city:"Alwar"
+        },
+
+        {
+            rollno:101,
+            name:"JS",
+            email:"jsr@gmail.com",
+            age:21,
+            city:"Udaipur"
+        }
+    ]
+
+        // console.log(obj)
+        // console.log(obj.name,obj.age)
+        // console.log(obj["city"// 
+        // for(let i in obj)
+        // {
+        //     console.log(i,":",obj[i])
+        // }
+
+
+    let x = obj.filter((item)=> item.age < 18)
+    console.log(x)
+
+
+    let obj1 =  {
+            rollno:101,
+            fname:"Ankit",
+            lname:"Rai",
+            email:"akr@gmail.com",
+            age:21,
+            city:"Jaipur",
+            skills:["c++","Python","Poer bi"],
+            fullname:function()
+            {
+                return this.fname + " " + this.lname
+            },
+            marks:{
+                maths:90,
+                physics:80,
+                chemistry:70
+            }
+
+        }
+
+        console.log(obj1.fullname())
+        console.log(obj1.marks.maths)
+
+
+
+
+        
+    </script>
+</body>
+</html>

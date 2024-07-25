@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    
+    <script>
+
+    // Array 
+       // 
+        let a = [10,20,30,"akr","aman",true,1.5,500,600,700];
+
+        for(let i of a)
+    {
+        console.log(i)
+    }
+
+    // a.forEach((item,indexing)=>
+    // {
+    //     console.log(item,indexing)
+    // })
+
+
+    // Array Methods
+
+    // push
+    // pop
+    // unshift
+    // shift
+    // slice
+    // splice
+    // map
+    // filter
+    // reduce
+    // flat
+    // split
+    // join
+ 
+
+
+        // 1. push() - add element at the end of the array
+
+        a.push("ankit")
+        console.log(a)
+
+        // 2.pop() - delete element at the end of the array
+        a.pop()
+        console.log(a)
+
+        // 3. unshift - add element at the start of the array
+        a.unshift("hello")
+        console.log(a)
+
+        //4. shift - delete element at the start of the array
+        a.shift()
+        console.log(a)
+
+        //5. slice 
+       console.log(a.slice(0,-1))
+
+       //6. splice
+       a.splice(-5,4,false,"ayu")
+       console.log(a)
+
+       //7. map
+       let b = a.map((item)=> item+1)
+        console.log(b)
+
+        //8. filter - filter the data
+        let c = a.filter((item)=> item > 20)
+        console.log(c)
+
+        //9. reduce 
+        let d = a.reduce((x,y)=>x+y)
+        console.log(d)
+
+        //10. flat - convert 2d or 3d array into 1d array
+        let arr=[10,20,[1,2,[true,false],3,4,5],30,40,50]
+        console.log(arr.flat(2)) 
+
+        //11. split - convert string type into array and divide where particular symbol is present like(,-0)
+        let str = "10,20,30,40,50"
+        console.log(str.split(","))
+
+        //12. join - inverse of split
+        let arr1 = [10,20,30,40,50]
+        console.log(arr1.join(","))
+
+
+        let akr ='AdvikaSharma'
+        console.log(akr.length)
+        console.log(akr.toUpperCase())
+        console.log(akr.toLowerCase())
+        console.log(akr.repeat(3))
+        console.log(akr.replace("Sharma","Rai"))
+        console.log(akr.charCodeAt(4))
+        console.log(akr.includes("arm"))
+        console.log(akr.includes("ara"))
+
+
+
+    </script>
+</body>
+</html>
